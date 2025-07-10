@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         jump = context.ReadValue<float>();
-        Debug.Log(jump);
     }
 
     void FixedUpdate()
@@ -51,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
-            Debug.Log("Grounded");
         }
     }
 
@@ -60,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
-            Debug.Log("Not Grounded");
         }
     }
 }
