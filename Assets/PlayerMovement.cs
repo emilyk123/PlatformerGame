@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     float jump = 0f;
     Rigidbody2D rb;
+    Vector2 respawnLocation = Vector2.zero;
 
     void Start()
     {
@@ -44,9 +45,14 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "RespawnPoint")
+        {
+            respawnLocation = collision.transform.position;
+        }
+
         if (collision.gameObject.tag == "Spike")
         {
-            Debug.Log("Hit Spike");
+            transform.position = respawnLocation;
         }
     }
 
