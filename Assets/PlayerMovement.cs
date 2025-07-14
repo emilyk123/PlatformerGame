@@ -29,12 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isGrounded)
+        if (isGrounded && jump != 0)
         {
-            if (jump != 0)
-            {
-                rb.AddForce(Vector2.up * jumpAmount);
-            }
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpAmount);
         }
     }
 
