@@ -8,3 +8,4 @@
 *.asset eol=lf
 *.txt eol=lf
 *.md eol=lf
+*.prefab eol=lf
