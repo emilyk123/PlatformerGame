@@ -42,19 +42,19 @@ public class PlayerMovement : MonoBehaviour
         transform.position = position;
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Spike")
+        {
+            Debug.Log("Hit Spike");
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
-        }
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Spike")
-        {
-            Debug.Log("Hit Spike");
         }
     }
 
