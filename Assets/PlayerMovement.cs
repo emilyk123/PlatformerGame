@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float jump = 0f;
     Rigidbody2D rb;
     Vector2 respawnLocation = Vector2.zero;
+    bool hasKey = false;
 
     void Start()
     {
@@ -53,6 +54,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Spike")
         {
             transform.position = respawnLocation;
+        }
+
+        if (collision.gameObject.tag == "Key")
+        {
+            hasKey = true;
+            Destroy(collision.gameObject);
+            Debug.Log(hasKey);
         }
     }
 
