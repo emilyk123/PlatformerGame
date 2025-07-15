@@ -8,6 +8,7 @@ TagManager:
   - Spike
   - RespawnPoint
   - Key
+  - Door
   layers:
   - Default
   - TransparentFX

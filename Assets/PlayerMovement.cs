@@ -60,7 +60,11 @@ public class PlayerMovement : MonoBehaviour
         {
             hasKey = true;
             Destroy(collision.gameObject);
-            Debug.Log(hasKey);
+        }
+
+        if (collision.gameObject.tag == "Door" && hasKey == true)
+        {
+            Debug.Log("Load next room");
         }
     }
 
