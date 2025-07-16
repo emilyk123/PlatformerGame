@@ -74,6 +74,16 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if (collision.gameObject.tag == "GroundEnemy")
+        {
+            Debug.Log("Hit Ground Enemy");
+        }
+
+        if (collision.gameObject.tag == "FlyingEnemy")
+        {
+            Debug.Log("Hit Flying Enemy");
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)

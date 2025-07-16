@@ -10,6 +10,8 @@ TagManager:
   - Key
   - Door
   - EnemyBorder
+  - GroundEnemy
+  - FlyingEnemy
   layers:
   - Default
   - TransparentFX
