@@ -2989,7 +2989,7 @@ GameObject:
   - component: {fileID: 481876332}
   - component: {fileID: 481876334}
   - component: {fileID: 481876333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7295,7 +7295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100958535}
   - component: {fileID: 1100958536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Border (1)
   m_TagString: EnemyBorder
   m_Icon: {fileID: 0}
@@ -17544,7 +17544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2076998113}
   - component: {fileID: 2076998114}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Border
   m_TagString: EnemyBorder
   m_Icon: {fileID: 0}
