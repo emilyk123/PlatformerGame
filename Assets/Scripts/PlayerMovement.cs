@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     float jump = 0f;
     Rigidbody2D rb;
-    Vector2 respawnLocation = Vector2.zero;
+    Vector2 respawnLocation = new Vector2(-8, -0.25f);
     bool hasKey = false;
 
     void Start()
@@ -78,11 +78,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "GroundEnemy")
         {
             Debug.Log("Hit Ground Enemy");
+            transform.position = respawnLocation;
         }
 
         if (collision.gameObject.tag == "FlyingEnemy")
         {
             Debug.Log("Hit Flying Enemy");
+            transform.position = respawnLocation;
         }
     }
 
