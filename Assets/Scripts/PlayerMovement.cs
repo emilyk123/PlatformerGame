@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Vector2 respawnLocation = new Vector2(-8, -0.25f);
     bool hasKey = false;
+    int coinCount = 0;
 
     void Start()
     {
@@ -70,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
+            coinCount++;
+            Debug.Log("Coin Count: " + coinCount);
         }
     }
 
