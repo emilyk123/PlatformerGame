@@ -12,7 +12,7 @@ public class FlyingEnemy : MonoBehaviour
         transform.position += new Vector3(movement * direction * Time.deltaTime, Mathf.Sin(flyingWavelength * Time.time) * flyingAmplitude, 0f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "EnemyBorder")
         {

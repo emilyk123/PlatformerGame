@@ -81,15 +81,7 @@ public class PlayerMovement : MonoBehaviour
             coinCount++;
             Debug.Log("Coin Count: " + coinCount);
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-
+        
         if (collision.gameObject.tag == "GroundEnemy")
         {
             Debug.Log("Hit Ground Enemy");
@@ -104,6 +96,14 @@ public class PlayerMovement : MonoBehaviour
             health--;
             Debug.Log("Health: " + health);
             transform.position = respawnLocation;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
         }
     }
 

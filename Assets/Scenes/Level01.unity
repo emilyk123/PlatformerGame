@@ -17755,6 +17755,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3390441205421739260, guid: 4858f5096e5d7a74d9b76608e28f8c29, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4971523038740803289, guid: 4858f5096e5d7a74d9b76608e28f8c29, type: 3}
       propertyPath: m_Name
       value: GroundEnemy
@@ -17908,6 +17912,10 @@ PrefabInstance:
     - target: {fileID: 2930419353450291715, guid: 8d92047b81f9c8f40ad80ffebb92a3bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721918751083659213, guid: 8d92047b81f9c8f40ad80ffebb92a3bb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6535173937064828494, guid: 8d92047b81f9c8f40ad80ffebb92a3bb, type: 3}
       propertyPath: m_Name
