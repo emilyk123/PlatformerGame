@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!isGrounded)
+        {
+            jump = 0;
+        }
         rb.linearVelocity = new Vector2(movement.x * speed, jump * jumpAmount);
     }
 
