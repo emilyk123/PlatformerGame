@@ -66,6 +66,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Load next room");
         }
+
+        if (collision.gameObject.tag == "Coin")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

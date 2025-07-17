@@ -12,6 +12,7 @@ TagManager:
   - EnemyBorder
   - GroundEnemy
   - FlyingEnemy
+  - Coin
   layers:
   - Default
   - TransparentFX
