@@ -3208,8 +3208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6529632580515104c8419ddd2edf848e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpAmount: 12
+  speed: 10
+  jumpAmount: 20
 --- !u!61 &481876333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3271,7 +3271,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 30
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
