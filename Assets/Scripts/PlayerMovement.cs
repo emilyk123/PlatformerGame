@@ -41,7 +41,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        rb.linearVelocity = new Vector2(movement.x * speed, jump * jumpAmount);
+        Vector2 position = transform.position;
+        if (movement.x != 0)
+        {
+            position.x += movement.x * speed * Time.deltaTime;
+            if (movement.x > 0)
+            {
+                finalDistance = position + Vector2.right;
+            }
+            else
+            {
+                finalDistance = position + Vector2.left;
+            }
+        }
+        else
+        {
+            position.x = Vector2.MoveTowards(position, finalDistance, speed * Time.deltaTime).x;
+        }
+        transform.position = position;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
