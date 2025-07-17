@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 respawnLocation = new Vector2(-8, -0.25f);
     bool hasKey = false;
     int coinCount = 0;
+    int health = 3;
 
     void Start()
     {
@@ -43,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 position = transform.position;
         position.x += movement.x * speed * Time.deltaTime;
         transform.position = position;
+        if (health <= 0)
+        {
+            Debug.Log("Died");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -55,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Spike")
         {
             transform.position = respawnLocation;
+            health--;
+            Debug.Log("Health: " + health);
         }
 
         if (collision.gameObject.tag == "Key")
@@ -86,12 +93,16 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "GroundEnemy")
         {
             Debug.Log("Hit Ground Enemy");
+            health--;
+            Debug.Log("Health: " + health);
             transform.position = respawnLocation;
         }
 
         if (collision.gameObject.tag == "FlyingEnemy")
         {
             Debug.Log("Hit Flying Enemy");
+            health--;
+            Debug.Log("Health: " + health);
             transform.position = respawnLocation;
         }
     }
