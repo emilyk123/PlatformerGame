@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     float jump = 0f;
     Rigidbody2D rb;
+    [SerializeField] GameObject spawnLocation;
     Vector2 respawnLocation = new Vector2(-8, -0.25f);
     bool hasKey = false;
     int coinCount = 0;
@@ -47,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Died");
+            transform.position = spawnLocation.transform.position;
+            respawnLocation = spawnLocation.transform.position;
+            health = 3;
         }
     }
 
